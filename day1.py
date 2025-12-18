@@ -69,6 +69,11 @@ dict1 = {
     "salary" : 50000, 
 }
 print(dict1)
+#input function in python -> built in fucntion  -> to take input from user 
+full_name = input("what is that ")
+print(full_name)
+#wap to add 2 numbers by asking user about the value ok it need to be int
+
 
 
 
