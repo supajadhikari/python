@@ -123,31 +123,4 @@ a = True
 b = False
 print(a and b) #false
 print(a or b) #true
-
 print(not a) #false
-
-#5. membership operator -> in not in 
-sample = "hello spj"
-print("spj" not in sample ) #false
-print("kist" in sample) #false
-
-#6. Identity opeartor  -> is, isnot
-a=10;
-b= "20"
-c = 30 
-print(a is c) #false
-print(a is not b)#true
-
-#ternary operator -> value if true condition else value_if_fasle
-#other launguage -> conditiono> value : value 
-age = 18
-status = "above 18" if age >= 18 else "below 18"
-print(status)
-
-#bitwise operator -> & , | , ^ , ~ , << , >>   binary representation
-a = 5
-b = 3
-print(a & b) #0001 -> 1
-print(a | b) #0111 -> 7
-print(a ^ b) #0110 ->  
-
