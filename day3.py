@@ -51,19 +51,35 @@ print(list2)
 list2.extend([6,7,8])
 print(list2)
 
-#2. Tuple -> collection of immutable items 
 
-lst = [9,8,7,6,5,4]
+#2. Tuple -> collection of immutable items 
+# Initial list
+lst = [9, 8, 7, 6, 5, 4]
 print(lst)        # [9, 8, 7, 6, 5, 4]
+
+# Access element at index 2
 print(lst[2])     # 7
+
+# Update element at index 2
 lst[2] = 10
 print(lst)        # [9, 8, 10, 6, 5, 4]
-list2 = list(tup)   
-print(list2)
-list2.extend([3,2,1])
-print(list2)
+
+# Convert list to tuple
+tup = tuple(lst)
+print(tup)        # (9, 8, 10, 6, 5, 4)
+
+# Convert tuple back to list
+list2 = list(tup)
+print(list2)      # [9, 8, 10, 6, 5, 4]
+
+# Extend list with new elements
+list2.extend([3, 2, 1])
+print(list2)      # [9, 8, 10, 6, 5, 4, 3, 2, 1]
+
+# Convert back to tuple
 tup = tuple(list2)
-print(tup)
+print(tup)        # (9, 8, 10, 6, 5, 4, 3, 2, 1)
+
 
 #3. set - collection of unqiue items 
 set1={1,2,3,4,5,6,4,3,2,1}
@@ -85,36 +101,39 @@ print(set1)
 set1.clear()
 print(set1)
 
-#4.Dictiinary - collection of key value pairs 
-
+# Dictionary - collection of key value pairs
 dict1 = {
-    "name": "spj"
+    "name": "spj",
     "age": 20,
     "city": "ktm"
 }
+
+# Update value directly
 dict1["age"] = 27
-print(dict1)
-print(dict1["name"])
+print(dict1)          # {'name': 'spj', 'age': 27, 'city': 'ktm'}
+print(dict1["name"])  # spj
 
-#methods in dictionary -> keys , values ,items , get ,update 
-#keys -> returm all keys 
-print(dict1.keys())
+# Dictionary methods -> keys, values, items, get, update, pop
 
-#values -> return all valuess
-print(dict1.values())
+# keys -> return all keys
+print(dict1.keys())   # dict_keys(['name', 'age', 'city'])
 
-#intems -> return all key value pairs 
-print(dict1.values())
+# values -> return all values
+print(dict1.values()) # dict_values(['spj', 27, 'ktm'])
 
-#items -> get value for specific key 
-print(dict1.get("city"))
+# items -> return all key-value pairs
+print(dict1.items())  # dict_items([('name', 'spj'), ('age', 27), ('city', 'ktm')])
 
-#get -> get value for specific key 
-dict1.update({"age"}:20)
-print(dict1["age"])
+# get -> get value for specific key
+print(dict1.get("city"))  # ktm
 
-#update -> update value for the specifi key 
-dict1.update({"age":28}) 
-print(dict1.["age"])
+# update -> update value for a specific key
+dict1.update({"age": 20})
+print(dict1["age"])   # 20
 
-#pop -> remove specific keyt value pair 
+dict1.update({"age": 28})
+print(dict1["age"])   # 28
+
+# pop -> remove specific key-value pair
+dict1.pop("city")
+print(dict1)          # {'name': 'spj', 'age': 28}
