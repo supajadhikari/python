@@ -92,3 +92,25 @@ while (a<=10):
     a+=1
     
 #wap to print the multiplication table of 7 
+for i in range (0,11):
+    print("table of (i)")
+    for j in range (0,11):
+        print(f"{i} * {j} = {i*j}")
+
+#wap to print 
+#*
+#**
+#***
+#****
+#*****
+
+row=5
+for i in range (1, row+1):
+    print("*" * i) 
+    
+#or 
+
+for i in range (0,6):
+    for j in range(i):
+        print("*" , end="")
+        print()
